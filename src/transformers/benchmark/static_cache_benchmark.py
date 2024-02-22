@@ -151,7 +151,7 @@ if __name__ == "__main__":
 
                 run_kwargs = {
                     "measure_kwargs": {"number": 2, "repeat": 3},
-                    "target_kwargs": {"batch_size": 1, "max_cache_length": 16, "seq_length": 4},
+                    "target_kwargs": {"batch_size": batch_size, "max_cache_length": max_cache_length, "seq_length": seq_length},
                     "inputs_kwargs": {},
                     "report_kwargs": {},
                 }
