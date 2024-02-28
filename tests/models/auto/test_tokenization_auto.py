@@ -14,7 +14,9 @@
 # limitations under the License.
 
 import shutil
-shutil.rmtree('/mnt/cache/hub/models--facebook--flava-full', ignore_errors=True)
+# shutil.rmtree('/mnt/cache/hub/models--facebook--flava-full', ignore_errors=True)
+shutil.rmtree('/mnt/cache/hub/models--hf-internal-testing--test_dynamic_model_v1.0', ignore_errors=True)
+
 
 import json
 import os
