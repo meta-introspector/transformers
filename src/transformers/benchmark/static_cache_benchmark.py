@@ -132,7 +132,7 @@ if __name__ == "__main__":
     benchmakr = StaticCacheSpeedBenchMark(repo_id=repo_id, prefill_num_iter=prefill_num_iter, num_iter=num_iter)
 
     all_batch_size = [1, 2]
-    all_max_cache_length = [1024, 512, 256, 128]
+    all_max_cache_length = [512, 256, 128]
     all_seq_length = [128, 1, 256]
 
     # all_batch_size = [1, 2, 4]
