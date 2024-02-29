@@ -15,6 +15,7 @@
 Benchmark
 """
 import inspect
+import json
 import timeit
 
 
@@ -99,6 +100,9 @@ class BenchMark:
             report["run_kwargs"] = run_info
 
         report = self._convert_to_json(report)
+        if output_path is not None:
+            with open(output_path, "w", encoding="UTF-8") as fp:
+                json.dump(report, fp, ensure_ascii=False, indent=4)
 
         return report
 

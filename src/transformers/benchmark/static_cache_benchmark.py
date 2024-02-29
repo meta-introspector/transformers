@@ -153,7 +153,7 @@ if __name__ == "__main__":
                     "measure_kwargs": {"number": 2, "repeat": 3},
                     "target_kwargs": {"batch_size": batch_size, "max_cache_length": max_cache_length, "seq_length": seq_length},
                     "inputs_kwargs": {},
-                    "report_kwargs": {},
+                    "report_kwargs": {"output_path": "benchmark_report.json"},
                 }
 
                 result = benchmakr.run(**run_kwargs)
