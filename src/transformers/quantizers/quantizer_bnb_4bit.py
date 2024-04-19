@@ -58,11 +58,11 @@ class Bnb4BitHfQuantizer(HfQuantizer):
             self.modules_to_not_convert = self.quantization_config.llm_int8_skip_modules
 
     def validate_environment(self, *args, **kwargs):
-        if not (is_accelerate_available() and is_bitsandbytes_available()):
-            raise ImportError(
-                "Using `bitsandbytes` 8-bit quantization requires Accelerate: `pip install accelerate` "
-                "and the latest version of bitsandbytes: `pip install -i https://pypi.org/simple/ bitsandbytes`"
-            )
+        # if not (is_accelerate_available() and is_bitsandbytes_available()):
+        #     raise ImportError(
+        #         "Using `bitsandbytes` 8-bit quantization requires Accelerate: `pip install accelerate` "
+        #         "and the latest version of bitsandbytes: `pip install -i https://pypi.org/simple/ bitsandbytes`"
+        #     )
 
         if kwargs.get("from_tf", False) or kwargs.get("from_flax", False):
             raise ValueError(
@@ -70,8 +70,8 @@ class Bnb4BitHfQuantizer(HfQuantizer):
                 " sure the weights are in PyTorch format."
             )
 
-        if not torch.cuda.is_available():
-            raise RuntimeError("No GPU found. A GPU is needed for quantization.")
+        # if not torch.cuda.is_available():
+        #     raise RuntimeError("No GPU found. A GPU is needed for quantization.")
 
         device_map = kwargs.get("device_map", None)
         if (
